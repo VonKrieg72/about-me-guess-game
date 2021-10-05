@@ -1,0 +1,21 @@
+body {
+  background-color:darkorange
+}
+h1 {
+  font-size: 5rem;
+  color:darkblue
+}
+
+ul {
+ margin-left: 2rem;
+ list-style-type: disc; 
+}
+
+li {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+p {
+  font-size:large;
+}
