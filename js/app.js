@@ -27,7 +27,7 @@ alert("Welcome to my webpage " + userName);
 
 
 
-function questionOne(){
+function quiz() {
 let userAnswer1 = prompt("Was I born and raised in MA? Yes or No?"). toLowerCase();
 
 if (userAnswer1 === 'no'  || userAnswer1 === 'n') {
@@ -38,11 +38,11 @@ if (userAnswer1 === 'no'  || userAnswer1 === 'n') {
   alert('Sorry, that is NOT correct.');
   //console.log('Sorry, that is NOT correct.');
 }
-}
-questionOne()
 
 
-function questionTwo(){
+
+
+
 let userAnswer2 = prompt("Do I currently live in PA? Yes or No?")
 
 if (userAnswer2 === 'yes'  || userAnswer2 === 'y'){
@@ -53,7 +53,7 @@ if (userAnswer2 === 'yes'  || userAnswer2 === 'y'){
   alert('Sorry, that is NOT correct.');
   //console.log('Sorry, that is NOT correct.');
 }
-}
+
 
 
 
@@ -134,6 +134,9 @@ function userGuessingGame() {
 
 
 userGuessingGame()
+
+}
+quiz()
 
 alert(score)
 
