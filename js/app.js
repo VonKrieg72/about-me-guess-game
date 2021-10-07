@@ -127,7 +127,7 @@ function userGuessingGame() {
       
     
   }
-  alert('Sorry you did\'nt answer correctly.  The correct answer is: ' + correctAnswer);
+  alert('Sorry you didn\'t answer correctly.  The correct answer is: ' + correctAnswer);
 
   }
   
