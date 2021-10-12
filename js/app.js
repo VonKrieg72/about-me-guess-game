@@ -7,27 +7,6 @@ let userName = prompt("What is your name?")
 console.log(userName);
 alert("Welcome to my webpage " + userName);
 
-//function is to code repeats only once.
-// DRY, DRY, DRY!!!
-
-/*Refactor options
-  questions in an array and looping the array running function each time
-  create multiple functions
-  one function with multiple questions.
-*/
-
-/*function syntax
-  function nameOfFunction () {
-    //some code here
-  }
-  //must invoke it to have it actually run
-  IIFE || instanciate
-  nameOfFunction()
-*/
-
-
-
-function quiz() {
 let userAnswer1 = prompt("Was I born and raised in MA? Yes or No?"). toLowerCase();
 
 if (userAnswer1 === 'no'  || userAnswer1 === 'n') {
@@ -39,10 +18,6 @@ if (userAnswer1 === 'no'  || userAnswer1 === 'n') {
   //console.log('Sorry, that is NOT correct.');
 }
 
-
-
-
-
 let userAnswer2 = prompt("Do I currently live in PA? Yes or No?")
 
 if (userAnswer2 === 'yes'  || userAnswer2 === 'y'){
@@ -53,9 +28,6 @@ if (userAnswer2 === 'yes'  || userAnswer2 === 'y'){
   alert('Sorry, that is NOT correct.');
   //console.log('Sorry, that is NOT correct.');
 }
-
-
-
 
 let userAnswer3 = prompt("Was I a student at Rutgers University? Yes or No?")
 
@@ -91,7 +63,7 @@ if (userAnswer5 === 'no'  || userAnswer5==="n"){
 }
 
 // let userAnswer6 = prompt('Please Guess my favorite number between 1 and 50');
-
+let isCorrect = false;
 function userGuessingGame() {
   console.log("here")
   let correctAnswer = 45;
@@ -108,7 +80,8 @@ function userGuessingGame() {
     if (userAnswerNum === correctAnswer){
       alert('You are correct, it\'s 45.')
       score++
-    break
+      isCorrect = true;
+    break;
     }else if(i === 4 && userAnswerNum !== correctAnswer){
       // alert("bang")
       break
@@ -122,23 +95,52 @@ function userGuessingGame() {
     } else {
       alert('Something else went wrong');
     }
-    console.log(i);
+    
     
       
     
   }
-  alert('Sorry you didn\'t answer correctly.  The correct answer is: ' + correctAnswer);
+  if (isCorrect === false){ 
+    alert('Sorry you did\'nt answer correctly.  The correct answer is: ' + correctAnswer);
 
   }
+}
+userGuessingGame()
+isCorrect = false;
+let possibleAnswerSeven = ['Antarctica', 'North Korea', 'Serengeti National Park', 'Mongolia', 'Iran', 'Kazakhstan', 'United Kingdom', 'Japan', 'Germany', 'Yellowstone National Park'];
+function userSeven(){
+
+let userAttemptSeven = 6;
+while(userAttemptSeven && !isCorrect){
+let userAnswerSeven = prompt('Guess one location that I would like to visit someday').toLowerCase();  
+  for(let i = 0; i < possibleAnswerSeven.length; i++){
+  if (userAnswerSeven === possibleAnswerSeven[i].toLowerCase()){
+    alert('You are correct');
+    score++;
+    isCorrect = true;
+    break;
+  } 
+}
+
+userAttemptSeven--;
+ if(isCorrect === false) {
+   alert(`That is not correct, you have ${userAttemptSeven} attempts remaining`);
+  
+} 
+}
+}
+userSeven()
+
+
+
+if(isCorrect === false){
+  let correctAnswerSeven= alert(`These are the possible answers ${possibleAnswerSeven}`);
+}
+alert(`You scored ${score} out of 7`);
   
 
 
-userGuessingGame()
 
-}
-quiz()
-
-alert(score)
 
 
 // let attemptsRemaining = 6;
